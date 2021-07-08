@@ -13,4 +13,4 @@ const calculator = func => {
 };
 
 const sum = calculator((x, y) => x + y);
-console.log(sum(0)(4)(2)());
+console.log(sum(0)(4)(2)()(3));
