@@ -1,7 +1,7 @@
 const calculator = func => {
     const next = (...args) => {
         return x => {
-            if (!x) {
+            if (!x && x !== 0) {
                 return args.reduce((acc, a) => {
                     return func.call(func, acc, a)
                 }, 0);
@@ -13,4 +13,4 @@ const calculator = func => {
 };
 
 const sum = calculator((x, y) => x + y);
-console.log(sum(1)(3)(4)(2)());
+console.log(sum(0)(4)(2)());
