@@ -9,7 +9,7 @@ const fn2 = () => new Promise(resolve => {
 })
 
 function promiseReduce(asyncFunctions, reduce, initialValue) {
-    return asyncFunctions.reduce(async (accPromise, nextFunc) => {
+    return asyncFunctions.reduce((accPromise, nextFunc) => {
         return accPromise.then(acc => {
             return nextFunc().then(val => reduce(acc, val))
         })
